@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title> Movie Tracker</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="Style.css">
     </head>
 
-    <body>
+    <body onload="Start()">
         <header>
             <!-- place navbar here -->
         </header>
@@ -43,6 +43,7 @@
 
                 <tbody id="newRow">
                     <tr>
+                        
                         <th scope="row">
                             <div class="text-center">
                                 <img src="https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="rounded rowImg" alt="Image">
@@ -57,9 +58,6 @@
                                 <option value="2">In Progress</option>
                                 <option value="3">Watched</option>
                             </select>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger" onclick="remove(this)">Delete</button>
                         </td>
                         <td>
                             <button type="button" class="btn btn-danger" onclick="remove(this)">Delete</button>
