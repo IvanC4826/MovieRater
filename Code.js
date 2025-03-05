@@ -1,3 +1,15 @@
+onload 
+
+
+
+
+
+
+
+
+
+
+
 function addToTable() {
     let newRow = document.getElementById("newRow");
     newRow.innerHTML+= `<tr>
