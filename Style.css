@@ -1,0 +1,12 @@
+h1 {
+    color: blue;
+}
+
+.rowImg {
+    height: auto;
+    max-width: 50px;
+}
+
+td {
+    vertical-align: middle;
+}
