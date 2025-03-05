@@ -1,7 +1,8 @@
 function start(){
     var row = [
-        ["https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", "Spider-Man: Across the Spider-Verse", "Super Hero", "2h 20m"]
-
+        ["https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", "Spider-Man: Across the Spider-Verse", "Super Hero", "2h 20m"],
+        ["https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg", "Spider-Man: Into the Spider-Verse", "Super Hero", "1h 57m"]
+        
         //["imgURL", "title", "genre", "duration"]
     ];
 
