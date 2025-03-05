@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="Style.css">
     </head>
 
-    <body onload="Start()">
+    <body onload="start()"> <!-- onload="Start()" -->
         <header>
             <!-- place navbar here -->
         </header>
@@ -37,33 +37,13 @@
                     <th scope="col">Genre</th>
                     <th scope="col">Duration</th>
                     <th scope="col">Status</th>
-                    <th scope="col" alt="delete"></th>
+                    <th scope="col" alt="delete">
+                        <button type="button" class="btn btn-success " onclick="addToTable('https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '1h 57m')">Add</button>
+                    </th>
                   </tr>
                 </thead>
 
                 <tbody id="newRow">
-                    <tr>
-                        
-                        <th scope="row">
-                            <div class="text-center">
-                                <img src="https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="rounded rowImg" alt="Image">
-                            </div>
-                        </th>
-                        <td>Spider-Man: Across the Spider-Verse</td>
-                        <td>Super Hero</td>
-                        <td>2h 20m</td>
-                        <td>
-                            <select class="custom-select" id="inputGroupSelect01">\
-                                <option value="1" selected>Not Watched</option>
-                                <option value="2">In Progress</option>
-                                <option value="3">Watched</option>
-                            </select>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger" onclick="remove(this)">Delete</button>
-                        </td>
-
-                    </tr>
 
                 </tbody>
 
