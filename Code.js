@@ -1,21 +1,28 @@
 function start(){
-    var row = [
-        ['https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'Spider-Man: Across the Spider-Verse', 'Super Hero', '2h 20m'],
-        ['https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '1h 57m']
-        
-        //['imgURL', 'title', 'genre', 'duration']
+    var rec = [
+        ['https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'Spider-Man: Across the Spider-Verse', 'Super Hero', '2023'],
+        ['https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '2018'],
+        //['imgURL', 'title', 'genre', 'date'],
     ];
 
-    for (let i = 0; i < row.length; i++){
-        addToTable(row[i][0], row[i][1], row[i][2], row[i][3]);
+    for (let i = 0; i < rec.length; i++){
+        addToTable(rec[i][0], rec[i][1], rec[i][2], rec[i][3]);
     }
 }
 
 function promptAdd(){
+    var title = document.getElementById("newTitle").value;
+    var genre = document.getElementById("newGenre").value;
+    var date = document.getElementById("newDate").value;
+    var img = document.getElementById("newImg").value;
+    if (img == ""){
+        img = "https://www.saltybottomreefcompany.com/assets/images/products_noimageyet.jpg";
+    }
 
+    addToTable(img, title, genre, date);
 }
 
-function addToTable(imgURL, title, genre, duration) {
+function addToTable(imgURL, title, genre, date) {
     let newRow = document.getElementById("newRow");
     newRow.innerHTML+= 
     `<tr>
@@ -27,7 +34,7 @@ function addToTable(imgURL, title, genre, duration) {
         </th>
         <td>`+title+`</td>
         <td>`+genre+`</td>
-        <td>`+duration+`</td>
+        <td>`+date+`</td>
         <td>
             <select class="custom-select" id="inputGroupSelect01">\
                 <option value="1" selected>Not Watched</option>
@@ -44,6 +51,10 @@ function addToTable(imgURL, title, genre, duration) {
 }
 
 function remove(button){
-    var row = button.closest('tr');
-    row.remove();
+    var rec = button.closest('tr');
+    rec.remove();
+}
+
+function test(){
+    alert("test");
 }

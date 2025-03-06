@@ -20,11 +20,18 @@
 
         <!-- CSS File -->
         <link rel="stylesheet" href="Style.css">
+
+        
     </head>
 
     <body onload="start()"> <!-- onload="Start()" -->
         <header>
-            <!-- place navbar here -->
+            <h1>
+                Movie Tracker
+            </h1>
+            <p>
+                A Conviniet little place to help keep track of the movies you watched. Well get you started with some recomendations!
+            </p>
         </header>
 
         <main>
@@ -35,16 +42,46 @@
                     <th scope="col" alt="Image"></th>
                     <th scope="col">Title</th>
                     <th scope="col">Genre</th>
-                    <th scope="col">Duration</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Status</th>
-                    <th scope="col" alt="delete">
-                        <button type="button" class="btn btn-success " onclick="addToTable('https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '1h 57m')">Add</button>
+                    <th scope="col" alt="add/delete">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Add
+                            </button>
+                            <div class="continer dropdown-menu dropdown-menu-end dropDownC">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" id="newTitle">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="inputGroupSelect01" id="newGenre">
+                                        <option selected>N/A</option>
+                                        <option value="1">Super hero</option>
+                                        <option value="2">Action</option>
+                                        <option value="3">Romance</option>
+                                        <option value="4">Comedy</option>
+                                        <option value="5">Horror</option>
+                                      </select>
+                                    <input type="text" class="form-control" placeholder="Release Date" aria-label="Server" id="newDate">
+                                </div>
+                                <hr class="dropdown-divider">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Optional</span>
+                                    <input type="text" class="form-control" placeholder="Image URL" aria-label="Username" aria-describedby="basic-addon1" id="newImg">
+                                </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-success me-md-2" type="button" onmousedown="promptAdd()">Add New Movie</button>
+                                </div>
+                            </div>
+                        </div>
                     </th>
                   </tr>
                 </thead>
 
                 <tbody id="newRow">
-
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-success me-md-2" type="button" onclick="test()">Add New Movie</button>
+                    </div>
                 </tbody>
 
                 </table>

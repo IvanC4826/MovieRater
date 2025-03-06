@@ -4,7 +4,7 @@ h1 {
 
 .rowImg {
     height: auto;
-    max-width: 50px;
+    max-width: 80px;
 }
 
 td {
@@ -13,4 +13,14 @@ td {
 
 container {
     background-color: aqua;
+}
+
+.dropDownC{
+    margin-left: 20px;
+}
+
+/* with the help of AI */
+.dropdown-menu {
+    width: 500px; 
+
 }
