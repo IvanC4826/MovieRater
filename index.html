@@ -24,18 +24,18 @@
         
     </head>
 
-    <body onload="start()"> <!-- onload="Start()" -->
+    <body onload="start()" > 
         <header>
             <h1>
                 Movie Tracker
             </h1>
-            <p>
-                A Conviniet little place to help keep track of the movies you watched. Well get you started with some recomendations!
+            <p class="p-3 mb-2 rounded-pill">
+                A convenient little place to help keep track of the movies you watched. Well get you started with some recommendations!
             </p>
         </header>
 
         <main>
-            <div class="container">
+            <div class="container" id="tableID">
                 <table class="table table-hover ">
                 <thead>
                   <tr>
@@ -49,18 +49,18 @@
                             <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 Add
                             </button>
-                            <div class="continer dropdown-menu dropdown-menu-end dropDownC">
+                            <div class="continer dropdown-menu dropdown-menu-end dropDownC" data-bs-auto-close="outside">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" id="newTitle">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <select class="form-select" id="inputGroupSelect01" id="newGenre">
+                                    <select class="form-select" id="newGenre">
                                         <option selected>N/A</option>
-                                        <option value="1">Super hero</option>
-                                        <option value="2">Action</option>
-                                        <option value="3">Romance</option>
-                                        <option value="4">Comedy</option>
-                                        <option value="5">Horror</option>
+                                        <option value="Super hero">Super Hero</option>
+                                        <option value="Action">Action</option>
+                                        <option value="Romance">Romance</option>
+                                        <option value="Comedy">Comedy</option>
+                                        <option value="Horror">Horror</option>
                                       </select>
                                     <input type="text" class="form-control" placeholder="Release Date" aria-label="Server" id="newDate">
                                 </div>
@@ -70,7 +70,7 @@
                                     <input type="text" class="form-control" placeholder="Image URL" aria-label="Username" aria-describedby="basic-addon1" id="newImg">
                                 </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-success me-md-2" type="button" onmousedown="promptAdd()">Add New Movie</button>
+                                    <button class="btn btn-success me-md-2" type="button" id="addNewMovie" onclick="promptAdd()">Add New Movie</button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                 </thead>
 
                 <tbody id="newRow">
-                    
+
                 </tbody>
 
                 </table>
@@ -105,7 +105,7 @@
         ></script>
 
         <!-- JavaScript File -->
-         <script src="Code.js"></script>
+         <script src="Code.js" defer></script>
 
     </body>
 </html>

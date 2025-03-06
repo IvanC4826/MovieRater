@@ -1,18 +1,29 @@
 h1 {
-    color: blue;
+    text-align: center;
+    font-size: 100px;
 }
 
-.rowImg {
-    height: auto;
-    max-width: 80px;
+p {
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(124, 218, 186);
+}
+
+body {
+    background-color: rgb(193, 221, 186);
 }
 
 td {
     vertical-align: middle;
 }
 
-container {
-    background-color: aqua;
+.tableID {
+    background-color: brown;
+}
+
+.rowImg {
+    height: auto;
+    max-width: 80px;
 }
 
 .dropDownC{
