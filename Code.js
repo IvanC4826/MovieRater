@@ -15,6 +15,7 @@ function promptAdd(){
     var genre = document.getElementById("newGenre").value;
     var date = document.getElementById("newDate").value;
     var img = document.getElementById("newImg").value;
+    alert(img, title, genre, date);
     if (img == ""){
         img = "https://www.saltybottomreefcompany.com/assets/images/products_noimageyet.jpg";
     }
