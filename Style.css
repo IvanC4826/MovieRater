@@ -1,24 +1,26 @@
 h1 {
     text-align: center;
     font-size: 100px;
+    
 }
 
 p {
     text-align: center;
+    vertical-align: middle;
     font-size: 25px;
-    background-color: rgb(124, 218, 186);
+    background-color: rgb(176, 204, 247);
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 body {
-    background-color: rgb(193, 221, 186);
+    background-color: rgb(216, 241, 210);
 }
 
-td {
+tr {
+    text-align: center;
     vertical-align: middle;
-}
-
-.tableID {
-    background-color: brown;
+    font-size: 20px;
 }
 
 .rowImg {
@@ -26,12 +28,8 @@ td {
     max-width: 80px;
 }
 
-.dropDownC{
-    margin-left: 20px;
-}
-
 /* with the help of AI */
 .dropdown-menu {
-    width: 500px; 
+    width: 700px; 
 
 }

@@ -8,8 +8,6 @@ function start(){
         ['https://m.media-amazon.com/images/M/MV5BYjdlNWFlZjEtM2U0NS00ZWU5LTk1M2EtZmQxNWFiZjk0MGM5XkEyXkFqcGc@._V1_.jpg', 'John Wick: Chapter 3 - Parabellum', 'Action', '2019'],
         ['https://m.media-amazon.com/images/I/81fk-N7tvbL._AC_UF894,1000_QL80_.jpg', 'John Wick: Chapter 4', 'Action', '2013'],
         
-
-
         //['imgURL', 'title', 'genre', 'date'],
 
     ];
@@ -27,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function promptAdd(){
+    //With the help of AI
     var title = document.getElementById("newTitle").value;
     var genre = document.getElementById("newGenre").value;
     var date = document.getElementById("newDate").value;
@@ -58,14 +57,14 @@ function addToTable(imgURL, title, genre, date) {
         <td>`+genre+`</td>
         <td>`+date+`</td>
         <td>
-            <select class="custom-select" id="inputGroupSelect01">\
+            <select class="custom-select rounded" id="inputGroupSelect01">\
                 <option value="1" selected>Not Watched</option>
-                <option value="2">In Progress</option>
-                <option value="3">Watched</option>
+                <option value="2" >In Progress</option>
+                <option value="3" >Watched</option>
             </select>
         </td>
         <td>
-            <button type="button" class="btn btn-danger" onclick="remove(this)">Delete</button>
+            <button type="button" class="btn btn-danger rounded-pill" onclick="remove(this)" >Delete</button>
         </td>
 
     </tr>`
