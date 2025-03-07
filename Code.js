@@ -40,6 +40,7 @@ function promptAdd(){
         date = "N/A";
     }
 
+    alert("New Movie has been added");
     addToTable(img, title, genre, date);
 }
 
@@ -57,18 +58,35 @@ function addToTable(imgURL, title, genre, date) {
         <td>`+genre+`</td>
         <td>`+date+`</td>
         <td>
-            <select class="custom-select rounded" id="inputGroupSelect01">\
+            <select class="custom-select rounded">
+                <option value="1" selected>1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+            </select>
+        </td>
+        <td>
+            <select class="custom-select rounded">
                 <option value="1" selected>Not Watched</option>
                 <option value="2" >In Progress</option>
                 <option value="3" >Watched</option>
             </select>
         </td>
         <td>
-            <button type="button" class="btn btn-danger rounded-pill" onclick="remove(this)" >Delete</button>
+            <button type="button" class="btn btn-danger rounded-pill" onclick="PromptRemove(this)" >Delete</button>
         </td>
 
     </tr>`
     
+}
+
+
+function promptRemove(button){
+    var txt;
+    if (confirm("Do you wish to proceed with Removal?")) {
+        remove(button);
+    } 
 }
 
 function remove(button){
