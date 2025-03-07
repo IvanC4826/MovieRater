@@ -58,7 +58,7 @@ function addToTable(imgURL, title, genre, date) {
         <td>`+genre+`</td>
         <td>`+date+`</td>
         <td>
-            <select class="custom-select rounded">
+            <select class="custom-select rounded rateSelect" disabled>
                 <option value="1" selected>1</option>
                 <option value="2" >2</option>
                 <option value="3" >3</option>
@@ -67,7 +67,7 @@ function addToTable(imgURL, title, genre, date) {
             </select>
         </td>
         <td>
-            <select class="custom-select rounded">
+            <select class="custom-select rounded" onchange="statusCheck(this)">
                 <option value="1" selected>Not Watched</option>
                 <option value="2" >In Progress</option>
                 <option value="3" >Watched</option>
@@ -81,6 +81,17 @@ function addToTable(imgURL, title, genre, date) {
     
 }
 
+function statusCheck(select){
+    var toggle = select.closest("tr").querySelector('.rateSelect');
+
+    if(select.value === "3"){
+        toggle.disabled = !toggle.disabled;
+        //congrats();
+    }
+
+}
+
+// function congrats(){}
 
 function promptRemove(button){
     var txt;
@@ -90,8 +101,8 @@ function promptRemove(button){
 }
 
 function remove(button){
-    var rec = button.closest('tr');
-    rec.remove();
+    var row = button.closest('tr');
+    row.remove();
 }
 
 function test(){
