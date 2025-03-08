@@ -40,13 +40,12 @@ function promptAdd(){
         date = "N/A";
     }
 
-    Swal.fire("Movie: " + title + " has been added!");
     Swal.fire({
         position: "top",
         title: "Movie: " + title + " has been added!",
         showConfirmButton: false,
-        timer: 1000
-      });
+        timer: 1500
+    });
     addToTable(img, title, genre, date);
 }
 
@@ -82,7 +81,7 @@ function addToTable(imgURL, title, genre, date) {
             </select>
         </td>
         <td>
-            <button type="button" class="btn btn-danger rounded-pill" onclick="PromptRemove(this)" >Delete</button>
+            <button type="button" class="btn btn-danger rounded-pill" onclick="promptRemove(this)" >Delete</button>
         </td>
 
     </tr>`
@@ -94,12 +93,21 @@ function statusCheck(select){
 
     if(select.value === "3" && toggle.disabled == true){
         toggle.disabled = !toggle.disabled;
-        //congrats();
+        congrats();
     } 
 
 }
 
-// function congrats(){}
+function congrats(){
+    Swal.fire({
+        title: "You have finished a Movie",
+        text: "Dont forget to leave a Rating",
+        icon: "success",
+        position: "top",
+        showConfirmButton: false,
+        timer: 3500
+    });
+}
 
 function titleSearch(){
 
@@ -126,9 +134,24 @@ function titleSearch(){
 
 function promptRemove(button){
     var txt;
-    if (confirm("Do you wish to proceed with Removal?")) {
-        remove(button);
-    } 
+    Swal.fire({
+        title: "Are you sure you want to remove this movie?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Movie has been deleted",
+            position: "top",
+            showConfirmButton: false,
+            timer: 1000
+          });
+          remove(button);
+        }
+    });
 }
 
 function remove(button){
