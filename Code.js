@@ -81,17 +81,39 @@ function addToTable(imgURL, title, genre, date) {
     
 }
 
+
+
+var check = true;
 function statusCheck(select){
     var toggle = select.closest("tr").querySelector('.rateSelect');
 
-    if(select.value === "3"){
+    if(select.value === "3" && check){
         toggle.disabled = !toggle.disabled;
+        check = false;
         //congrats();
     }
 
 }
 
 // function congrats(){}
+
+function titleSearch(){
+
+    var filter = document.getElementById("searchBar").value.toUpperCase();
+    var rows = document.getElementById("movieTable").getElementsByTagName("tr")
+
+    for(var i = 0; i < rows.length; i++){
+
+        var movieTitle = rows[i].getElementsByTagName("td")[0].textContent;
+        if(movieTitle.toUpperCase().indexOf(filter) > -1){
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+
+    }   
+
+}
 
 function promptRemove(button){
     var txt;

@@ -35,8 +35,11 @@
         </header>
 
         <main>
-            <div class="container" id="tableID">
-                <table class="table table-hover table-striped">
+            <div class="container">
+
+                <input type="text" class="form-control" placeholder="Search for Title" id="searchBar" onkeyup="titleSearch()">
+
+                <table class="table table-hover table-striped" id="movieTable">
                 <thead>
                   <tr>
                     <th scope="col" alt="Image"></th>
