@@ -42,7 +42,16 @@
                 <table class="table table-hover" id="movieTable">
                 <thead>
                   <tr>
-                    <th scope="col" alt="Image"></th>
+                    <th scope="col" alt="Image">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-success dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Add
+                            </button>
+                            <div class="continer dropdown-menu dropdown-menu-end dropDownC" data-bs-auto-close="outside">
+                                
+                            </div>
+                        </div>
+                    </th>
                     <th scope="col">Title</th>
                     <th scope="col">Genre</th>
                     <th scope="col">Date</th>
@@ -53,7 +62,7 @@
                             <button type="button" class="btn btn-success dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 Add
                             </button>
-                            <div class="continer dropdown-menu dropdown-menu-end dropDownC" data-bs-auto-close="outside">
+                            <div class="continer dropdown-menu dropdown-menu-end dropDownC addDropdown"  data-bs-auto-close="outside">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" id="newTitle">
                                 </div>
