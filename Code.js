@@ -1,6 +1,6 @@
 function start(){
     var rec = [
-        ['https://m.media-amazon.com/images/M/MV5BNWI3ZTZmNjMtODQzNi00MGU3LThhMTQtZmZkMTkwNzAzZTk3XkEyXkFqcGc@._V1_.jpg', 'The Legend of Hei', 'Action', '2019'],
+        ['https://m.media-amazon.com/images/M/MV5BNWI3ZTZmNjMtODQzNi00MGU3LThhMTQtZmZkMTkwNzAzZTk3XkEyXkFqcGc@._V1_.jpg', 'The Legend of Hei', 'Adventure', '2019'],
         ['https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'Spider-Man: Across the Spider-Verse', 'Super Hero', '2023'],
         ['https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '2018'],
         ['https://m.media-amazon.com/images/M/MV5BNDUxMTc3YjktODhkYi00ZjE4LWJhYmEtOTI0NjUyMTAwMGY5XkEyXkFqcGc@._V1_.jpg', 'Puss in Boots: The Last Wish', 'Adventure', '2022'],
@@ -89,6 +89,56 @@ function addToTable(imgURL, title, genre, date) {
 
 }
 
+// function sort() {//W3School how to
+
+//     var radio = document.getElementByName("sortRadio");
+//     var selected;
+
+//     for(var i = 0; i < radio.length; i++){
+
+//         if(radio[i].checked){
+//             selected = radio[i].value
+//         }
+
+//     }
+
+    
+//     var table, switching, i, x, y, shouldSwitch;
+//     var rows = document.getElementById("movieTable").getElementsByTagName("tr");
+
+//     table = document.getElementById("movieTable");
+//     switching = true;
+//     /*Make a loop that will continue until
+//     no switching has been done:*/
+//     while (switching) {
+//         //start by saying: no switching is done:
+//         switching = false;
+//         /*Loop through all table rows (except the
+//         first, which contains table headers):*/
+//         for (i = 1; i < (rows.length - 1); i++) {
+//             //start by saying there should be no switching:
+//             shouldSwitch = false;
+//             /*Get the two elements you want to compare,
+//             one from current row and one from the next:*/
+//             x = rows[i].getElementByTagName("td")[selected];
+//             y = rows[i + 1].getElementByTagName("td")[selected];
+//             //check if the two rows should switch place:
+//             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+//                 //if so, mark as a switch and break the loop:
+//                 shouldSwitch = true;
+//                 break;
+//             }
+//         }
+//         if (shouldSwitch) {
+//         /*If a switch has been marked, make the switch
+//         and mark that a switch has been done:*/
+//         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+//         switching = true;
+//         }
+//     }
+
+// }
+
 function statusCheck(select){
     var toggle = select.closest("tr").querySelector('.rateSelect');
 
@@ -101,7 +151,7 @@ function statusCheck(select){
 
 function congrats(){
     Swal.fire({
-        title: "You have finished a Movie",
+        title: "You have finished a Movie!",
         text: "Dont forget to leave a Rating",
         icon: "success",
         position: "top",
@@ -110,10 +160,10 @@ function congrats(){
     });
 }
 
-function titleSearch(){
+function titleSearch(){ //W3School how to 
 
     var filter = document.getElementById("searchBar").value.toUpperCase();
-    var rows = document.getElementById("movieTable").getElementsByTagName("tr")
+    var rows = document.getElementById("movieTable").getElementsByTagName("tr");
 
     for(var i = 0; i < rows.length; i++){
 
