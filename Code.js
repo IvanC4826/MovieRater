@@ -40,13 +40,21 @@ function promptAdd(){
         date = "N/A";
     }
 
-    alert("New Movie has been added");
+    Swal.fire("Movie: " + title + " has been added!");
+    Swal.fire({
+        position: "top",
+        title: "Movie: " + title + " has been added!",
+        showConfirmButton: false,
+        timer: 1000
+      });
     addToTable(img, title, genre, date);
 }
 
 function addToTable(imgURL, title, genre, date) {
-    let newRow = document.getElementById("newRow");
-    newRow.innerHTML+= 
+    var tableList = document.getElementById("newRow");
+    let newRow = tableList.insertRow(); //Revised By AI
+
+    newRow.innerHTML = 
     `<tr>
 
         <th scope="row">
@@ -59,7 +67,7 @@ function addToTable(imgURL, title, genre, date) {
         <td>`+date+`</td>
         <td>
             <select class="custom-select rounded rateSelect" disabled>
-                <option value="1" selected>1</option>
+                <option value="1" >1</option>
                 <option value="2" >2</option>
                 <option value="3" >3</option>
                 <option value="4" >4</option>
@@ -68,7 +76,7 @@ function addToTable(imgURL, title, genre, date) {
         </td>
         <td>
             <select class="custom-select rounded" onchange="statusCheck(this)">
-                <option value="1" selected>Not Watched</option>
+                <option value="1" >Not Watched</option>
                 <option value="2" >In Progress</option>
                 <option value="3" >Watched</option>
             </select>
@@ -78,20 +86,16 @@ function addToTable(imgURL, title, genre, date) {
         </td>
 
     </tr>`
-    
+
 }
 
-
-
-var check = true;
 function statusCheck(select){
     var toggle = select.closest("tr").querySelector('.rateSelect');
 
-    if(select.value === "3" && check){
+    if(select.value === "3" && toggle.disabled == true){
         toggle.disabled = !toggle.disabled;
-        check = false;
         //congrats();
-    }
+    } 
 
 }
 

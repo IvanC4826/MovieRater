@@ -30,7 +30,7 @@
                 Movie Tracker
             </h1>
             <p class="p-3 mb-2 rounded-pill">
-                A convenient little place to help keep track of the movies you watched. Well get you started with some recommendations!
+                A convenient little place to help keep track of the movies you watched. We'll get you started with some recommendations!
             </p>
         </header>
 
@@ -39,7 +39,7 @@
 
                 <input type="text" class="form-control" placeholder="Search for Title" id="searchBar" onkeyup="titleSearch()">
 
-                <table class="table table-hover table-striped" id="movieTable">
+                <table class="table table-hover" id="movieTable">
                 <thead>
                   <tr>
                     <th scope="col" alt="Image"></th>
@@ -110,7 +110,10 @@
         ></script>
 
         <!-- JavaScript File -->
-         <script src="Code.js" defer></script>
+        <script src="Code.js" defer></script>
+
+        <!-- SweetAlert2 Library (recomended by AI) -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </body>
 </html>
