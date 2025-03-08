@@ -104,11 +104,16 @@ function titleSearch(){
 
     for(var i = 0; i < rows.length; i++){
 
-        var movieTitle = rows[i].getElementsByTagName("td")[0].textContent;
-        if(movieTitle.toUpperCase().indexOf(filter) > -1){
+        var movieTitle = rows[i].getElementsByTagName("td")[0];
+
+        if(movieTitle){
+            var title = movieTitle.textContent || movieTitle.innerText;
+            if(title.toUpperCase().indexOf(filter) > -1){
             rows[i].style.display = "";
-        } else {
-            rows[i].style.display = "none";
+            } else {
+                rows[i].style.display = "none";
+            }
+
         }
 
     }   
