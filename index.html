@@ -44,17 +44,52 @@
                   <tr>
                     <th scope="col" alt="Image">
                         <div class="dropdown">
-                            <button type="button" class="btn btn-success dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Add
+                            <button type="button" class="btn btn-info dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort By:
                             </button>
-                            <div class="continer dropdown-menu dropdown-menu-end dropDownC" data-bs-auto-close="outside">
-                                
+                            <div class="continer dropdown-menu dropdown-menu-end dropdown-menu-lg-start" data-bs-auto-close="outside">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="noSort" checked>
+                                    <label value="1" class="form-check-label" for="noSort">
+                                        Unsorted
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="titleSort" >
+                                    <label value="2" class="form-check-label" for="titleSort">
+                                      Title
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="genreSort" >
+                                    <label value="3" class="form-check-label" for="genreSort">
+                                      Genre
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="dateSort" >
+                                    <label value="4" class="form-check-label" for="dateSort">
+                                        Release Date 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="ratingSort" >
+                                    <label value="5" class="form-check-label" for="ratingSort">
+                                      Rating
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sortRadio" id="statusSort" >
+                                    <label value="6" class="form-check-label" for="statusSort">
+                                      Status
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </th>
                     <th scope="col">Title</th>
                     <th scope="col">Genre</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Release Date</th>
                     <th scope="col">Rating</th>
                     <th scope="col">Status</th>
                     <th scope="col" alt="add/delete">

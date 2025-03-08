@@ -1,5 +1,6 @@
 function start(){
     var rec = [
+        ['https://m.media-amazon.com/images/M/MV5BNWI3ZTZmNjMtODQzNi00MGU3LThhMTQtZmZkMTkwNzAzZTk3XkEyXkFqcGc@._V1_.jpg', 'The Legend of Hei', 'Action', '2019'],
         ['https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'Spider-Man: Across the Spider-Verse', 'Super Hero', '2023'],
         ['https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg', 'Spider-Man: Into the Spider-Verse', 'Super Hero', '2018'],
         ['https://m.media-amazon.com/images/M/MV5BNDUxMTc3YjktODhkYi00ZjE4LWJhYmEtOTI0NjUyMTAwMGY5XkEyXkFqcGc@._V1_.jpg', 'Puss in Boots: The Last Wish', 'Adventure', '2022'],
