@@ -41,92 +41,91 @@
 
                 <table class="table table-hover" id="movieTable">
                 <thead>
-                  <tr>
-                    <th scope="col" alt="Image">
+                    <tr>
+                        <th scope="col" alt="Image">
 
-                        <!-- <div class="dropdown">
-                            <button type="button" class="btn btn-info dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sort By:
-                            </button>
-                            <div class="continer dropdown-menu dropdown-menu-end dropdown-menu-lg-start" data-bs-auto-close="outside" onchange="sort()">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="noSort" checked>
-                                    <label value="1" class="form-check-label" for="noSort">
-                                        Unsorted
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="titleSort" >
-                                    <label value="2" class="form-check-label" for="titleSort">
-                                      Title
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="genreSort" >
-                                    <label value="3" class="form-check-label" for="genreSort">
-                                      Genre
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="dateSort" >
-                                    <label value="4" class="form-check-label" for="dateSort">
-                                        Release Date 
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="ratingSort" >
-                                    <label value="5" class="form-check-label" for="ratingSort">
-                                      Rating
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sortRadio" id="statusSort" >
-                                    <label value="6" class="form-check-label" for="statusSort">
-                                      Status
-                                    </label>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-info dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sort By:
+                                </button>
+                                <div class="continer dropdown-menu dropdown-menu-end dropdown-menu-lg-start" data-bs-auto-close="outside" >
+                                    <!-- <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="noSort"  checked>
+                                        <label class="form-check-label" for="noSort">
+                                            Unsorted
+                                        </label>
+                                    </div> -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="titleSort" onchange="sort(0)">
+                                        <label class="form-check-label" for="titleSort">
+                                        Title
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="genreSort" onchange="sort(1)">
+                                        <label class="form-check-label" for="genreSort">
+                                        Genre
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="dateSort" onchange="sort(2)"> 
+                                        <label class="form-check-label" for="dateSort">
+                                            Release Date 
+                                        </label>
+                                    </div>
+                                    <!-- <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="ratingSort" onchange="sort(3)">
+                                        <label class="form-check-label" for="ratingSort">
+                                        Rating
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sortRadio" id="statusSort" onchange="sort(4)">
+                                        <label class="form-check-label" for="statusSort">
+                                        Status
+                                        </label>
+                                    </div> -->
                                 </div>
                             </div>
-                        </div> -->
 
-                    </th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col">Release Date</th>
-                    <th scope="col">Rating</th>
-                    <th scope="col">Status</th>
-                    <th scope="col" alt="add/delete">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-success dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Add
-                            </button>
-                            <div class="continer dropdown-menu dropdown-menu-end dropDownC addDropdown"  data-bs-auto-close="outside">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" id="newTitle">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <select class="form-select" id="newGenre">
-                                        <option selected>N/A</option>
-                                        <option value="Super hero">Super Hero</option>
-                                        <option value="Action">Action</option>
-                                        <option value="Adventure">Action</option>
-                                        <option value="Romance">Romance</option>
-                                        <option value="Comedy">Comedy</option>
-                                        <option value="Horror">Horror</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Release Date" aria-label="Server" id="newDate">
-                                </div>
-                                <hr class="dropdown-divider">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Optional</span>
-                                    <input type="text" class="form-control" placeholder="Leave Blank Or Past An Image URL" aria-label="Username" aria-describedby="basic-addon1" id="newImg">
-                                </div>
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-success me-md-2" type="button" id="addNewMovie" onclick="promptAdd()">Add New Movie</button>
+                        </th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Status</th>
+                        <th scope="col" alt="add/delete">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-success dropdown-toggle " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Add
+                                </button>
+                                <div class="continer dropdown-menu dropdown-menu-end dropDownC addDropdown"  data-bs-auto-close="outside">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" id="newTitle">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <select class="form-select" id="newGenre">
+                                            <option selected>N/A</option>
+                                            <option value="Super hero">Super Hero</option>
+                                            <option value="Action">Action</option>
+                                            <option value="Adventure">Adventure</option>
+                                            <option value="Romance">Romance</option>
+                                            <option value="Horror">Horror</option>
+                                        </select>
+                                        <input type="text" class="form-control" placeholder="Release Date" aria-label="Server" id="newDate">
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Optional</span>
+                                        <input type="text" class="form-control" placeholder="Leave Blank Or Past An Image URL" aria-label="Username" aria-describedby="basic-addon1" id="newImg">
+                                    </div>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button class="btn btn-success me-md-2" type="button" id="addNewMovie" onclick="promptAdd()">Add New Movie</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </th>
-                  </tr>
+                        </th>
+                    </tr>
                 </thead>
 
                 <tbody id="newRow">

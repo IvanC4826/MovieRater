@@ -7,10 +7,13 @@ function start(){
         ['https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg', 'John Wick', 'Action', '2014'],
         ['https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_.jpg', 'John Wick: Chapter 2', 'Action', '2017'],
         ['https://m.media-amazon.com/images/M/MV5BYjdlNWFlZjEtM2U0NS00ZWU5LTk1M2EtZmQxNWFiZjk0MGM5XkEyXkFqcGc@._V1_.jpg', 'John Wick: Chapter 3 - Parabellum', 'Action', '2019'],
-        ['https://m.media-amazon.com/images/I/81fk-N7tvbL._AC_UF894,1000_QL80_.jpg', 'John Wick: Chapter 4', 'Action', '2013'],
-        
-        //['imgURL', 'title', 'genre', 'date'],
+        ['https://m.media-amazon.com/images/I/81fk-N7tvbL._AC_UF894,1000_QL80_.jpg', 'John Wick: Chapter 4', 'Action', '2023'],
+        ['https://m.media-amazon.com/images/M/MV5BZGEwNDU5MDUtNTgxNS00NjY1LWI4NWItNjljZDc2MmI1YWNhXkEyXkFqcGc@._V1_.jpg', 'Longlegs', 'Horror', '2024'],
+        ['https://m.media-amazon.com/images/M/MV5BOGZlZjAyYTItMDdjYy00OGZlLWI3NDAtYzM5ZjAwNjg0NWUxXkEyXkFqcGc@._V1_.jpg', 'Flight Risk', 'Action', '2025'],
+        ['https://m.media-amazon.com/images/M/MV5BYThiN2M0NTItODRmNC00NDhlLWFiYTgtMWM2YTEyYzI3ZTY1XkEyXkFqcGc@._V1_.jpg', 'Anora', 'Romance', '2024'],
 
+        //['imgURL', 'title', 'genre', 'date'],
+        
     ];
 
     for (let i = 0; i < rec.length; i++){
@@ -89,55 +92,45 @@ function addToTable(imgURL, title, genre, date) {
 
 }
 
-// function sort() {//W3School how to
+function sort(selected) {//W3School how to
 
-//     var radio = document.getElementByName("sortRadio");
-//     var selected;
-
-//     for(var i = 0; i < radio.length; i++){
-
-//         if(radio[i].checked){
-//             selected = radio[i].value
-//         }
-
-//     }
-
+    var radio = document.getElementsByName("sortRadio");
     
-//     var table, switching, i, x, y, shouldSwitch;
-//     var rows = document.getElementById("movieTable").getElementsByTagName("tr");
+    var table, switching, i, x, y, shouldSwitch;
+    var rows = document.getElementById("movieTable").getElementsByTagName("tr");
 
-//     table = document.getElementById("movieTable");
-//     switching = true;
-//     /*Make a loop that will continue until
-//     no switching has been done:*/
-//     while (switching) {
-//         //start by saying: no switching is done:
-//         switching = false;
-//         /*Loop through all table rows (except the
-//         first, which contains table headers):*/
-//         for (i = 1; i < (rows.length - 1); i++) {
-//             //start by saying there should be no switching:
-//             shouldSwitch = false;
-//             /*Get the two elements you want to compare,
-//             one from current row and one from the next:*/
-//             x = rows[i].getElementByTagName("td")[selected];
-//             y = rows[i + 1].getElementByTagName("td")[selected];
-//             //check if the two rows should switch place:
-//             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-//                 //if so, mark as a switch and break the loop:
-//                 shouldSwitch = true;
-//                 break;
-//             }
-//         }
-//         if (shouldSwitch) {
-//         /*If a switch has been marked, make the switch
-//         and mark that a switch has been done:*/
-//         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-//         switching = true;
-//         }
-//     }
+    table = document.getElementById("movieTable");
+    switching = true;
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("td")[selected];
+            y = rows[i + 1].getElementsByTagName("td")[selected];
+            //check if the two rows should switch place:
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        }
+    }
 
-// }
+}
 
 function statusCheck(select){
     var toggle = select.closest("tr").querySelector('.rateSelect');
