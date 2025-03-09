@@ -11,6 +11,7 @@ function start(){
         ['https://m.media-amazon.com/images/M/MV5BZGEwNDU5MDUtNTgxNS00NjY1LWI4NWItNjljZDc2MmI1YWNhXkEyXkFqcGc@._V1_.jpg', 'Longlegs', 'Horror', '2024'],
         ['https://m.media-amazon.com/images/M/MV5BOGZlZjAyYTItMDdjYy00OGZlLWI3NDAtYzM5ZjAwNjg0NWUxXkEyXkFqcGc@._V1_.jpg', 'Flight Risk', 'Action', '2025'],
         ['https://m.media-amazon.com/images/M/MV5BYThiN2M0NTItODRmNC00NDhlLWFiYTgtMWM2YTEyYzI3ZTY1XkEyXkFqcGc@._V1_.jpg', 'Anora', 'Romance', '2024'],
+        ['https://m.media-amazon.com/images/M/MV5BODRlNWRhZWUtMzdlZC00ZDIyLWFhZjMtYTcxNjI1ZDIwODhjXkEyXkFqcGc@._V1_.jpg', 'Nope', 'Horror', '2022'],
 
         //['imgURL', 'title', 'genre', 'date'],
         
@@ -156,10 +157,13 @@ function titleSearch(){ //W3School how to
 
         if(movieTitle){
             var title = movieTitle.textContent || movieTitle.innerText;
+
             if(title.toUpperCase().indexOf(filter) > -1){
-            rows[i].style.display = "";
+                rows[i].style.display = "";
+
             } else {
                 rows[i].style.display = "none";
+
             }
 
         }
@@ -177,7 +181,7 @@ function promptRemove(button){
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!"
-      }).then((result) => {
+    }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Movie has been deleted",
